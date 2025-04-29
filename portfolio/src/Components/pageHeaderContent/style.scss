@@ -1,0 +1,25 @@
+.page-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // Ensures the text is on the left and icon on the right
+    border-bottom: 2px dashed #ffc107; // Yellow dashed line
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    .header-text {
+        color: #ffc107; // Yellow text color
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .header-icon {
+        background-color: #ffc107; // Yellow background for the icon
+        color: #000; // Black icon color
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

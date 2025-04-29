@@ -1,0 +1,110 @@
+.navbar {
+    background-color: var(--yellow-theme-nav-background-color);
+    height: 70px;  /* ✅ Consistent height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* ✅ Full width */
+    z-index: 1000;
+    background: black;
+
+    &_container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: inherit;
+        padding: 0px 20px;
+        flex: 1;
+    }
+
+    .navbar_container {
+        &_logo {
+            color: var(--yellow-theme-main-color);
+            cursor: pointer;
+        }
+
+        &_menu {
+            display: flex;
+            list-style: none;
+            text-align: center;
+            margin: 0; /* ✅ Avoid extra spacing */
+
+            &_item {
+                line-height: 40px;
+                margin-right: 1.5rem;
+                font-size: 1.6rem;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 3px;
+                    background: transparent;
+                    transition: width 0.3s ease-in-out;
+                }
+                &:hover::after {
+                    width: 100%;
+                    background: var(--yellow-theme-main-color);
+                }
+
+                &_links {
+                    color: var(--yellow-theme-main-color);
+                    text-decoration: none;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+/* ✅ Push main content below navbar */
+.App-content {
+    margin-top: 80px; /* ✅ Adjust based on navbar height */
+}
+
+/* ✅ Mobile Menu Styles */
+.nav-icon {
+    display: none;
+    margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-icon {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        color: var(--yellow-theme-main-color);
+        z-index: 1100; /* ✅ Ensure it appears above */
+    }
+
+    .navbar_container_menu {  
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border-top: 1px solid #fff;
+        position: absolute;
+        top: 70px; /* ✅ Match navbar height */
+        left: 0;
+        background-color: black;
+        z-index: 1000;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    /* ✅ Show menu when active */
+    .navbar_container_menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}

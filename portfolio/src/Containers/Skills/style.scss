@@ -1,0 +1,132 @@
+.skills {
+  background: linear-gradient(135deg, #1a1a1d);
+  padding: 3rem;
+  width: 120%;
+  height: 80vh;
+  box-sizing: border-box;
+  flex-direction: column;
+//   justify-content: flex-start;
+  align-items: center;
+//   margin: 20px;
+
+  .header-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 20px;
+  }
+
+  .skills-heading {
+      color: #ffc107;
+      font-weight: bold;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-in-out;
+  }
+
+  &__content-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+
+      &__inner-content {
+          background: #121212;
+          border: 2px solid #FFD700;
+          border-radius: 12px;
+          padding: 1.5rem;
+          box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+          transform: translateY(20px);
+          opacity: 0;
+          animation: cardFadeIn 1.2s ease-out forwards;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+          &:hover {
+              transform: translateY(-5px) scale(1.05);
+              box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+          }
+
+          &__category-text {
+              font-weight: bold;
+              color: #FFD700;
+              font-size: 1.8rem;
+              margin-bottom: 1rem;
+              text-transform: uppercase;
+              border-bottom: 3px solid #FFD700;
+              padding-bottom: 0.5rem;
+          }
+
+          &__progressbar-container {
+              width: 110%;
+          }
+
+          .progressbar-wrapper {
+              padding: 10px 0;
+
+              p {
+                  font-size: 1.2rem;
+                  font-weight: 500;
+                  text-transform: uppercase;
+                  color: #FFD700;
+              }
+          }
+
+          .rc-progress-line {
+              border-radius: 10px;
+              overflow: hidden;
+              height: 10px;
+          }
+
+          .rc-progress-line-path {
+              animation: progressAnimation 1.5s ease-out forwards;
+          }
+
+          @keyframes progressAnimation {
+              from {
+                  width: 0;
+              }
+              to {
+                  width: 100%;
+              }
+          }
+      }
+  }
+
+  @keyframes fadeInDown {
+      from {
+          opacity: 0;
+          transform: translateY(-20px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  @keyframes cardFadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  @media only screen and (max-width: 1024px) {
+      .skills__content-wrapper {
+          grid-template-columns: 1fr 1fr;
+      }
+  }
+
+  @media only screen and (max-width: 768px) {
+      .skills {
+          padding: 2rem;
+      }
+
+      .skills__content-wrapper {
+          grid-template-columns: 1fr;
+      }
+  }
+}

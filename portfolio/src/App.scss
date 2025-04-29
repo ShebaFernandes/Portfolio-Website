@@ -1,0 +1,16 @@
+.App {
+    min-height: 100vh; /* Prevents layout issues */
+    display: flex;
+    justify-items: center;
+    // flex-direction: column;
+}
+
+.App_main-page-content {
+    width: 100%;
+    height: 100vh; /* Ensure it fully occupies the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent extra scrolling */
+}
+
