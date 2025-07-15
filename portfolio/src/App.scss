@@ -13,4 +13,46 @@
     align-items: center;
     overflow: hidden; /* Prevent extra scrolling */
 }
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
+.journey {
+  color: var(--yellow-theme-sub-text-color);
+  padding: 2rem;
+
+  &__intro p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  &__timeline ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  &__timeline li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  &__lessons h3 {
+    color: var(--yellow-theme-main-color);
+    margin-bottom: 1rem;
+  }
+
+  &__lessons p {
+    margin: 0.4rem 0;
+  }
+
+  &__quote blockquote {
+    font-style: italic;
+    color: #ccc;
+    margin-top: 2rem;
+    border-left: 4px solid var(--yellow-theme-main-color);
+    padding-left: 1rem;
+  }
+}

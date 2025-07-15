@@ -8,7 +8,7 @@ const data = [
   { label: 'HOME', to: '/' },
   { label: 'ABOUT ME', to: '/About' },
   { label: 'SKILLS', to: '/Skills' },
-  { label: 'RESUME', to: '/Resume' },
+  { label: 'My Journey', to: '/My Journey' },
   // { label: 'PORTFOLIO', to: '/Portfolio' },
   { label: 'CONTACT', to: '/Contact' }
 ];

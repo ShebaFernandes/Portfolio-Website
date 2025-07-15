@@ -16,68 +16,59 @@ const Contact = () => {
           play
           duration={1}
           delay={0}
-          start={{
-            transform: "translateX(-200px)",
-          }}
-          end={{
-            transform: "translateX(0px)",
-          }}
+          start={{ transform: "translateX(-200px)" }}
+          end={{ transform: "translateX(0px)" }}
         >
           <h3 className="contact__content__header-text">Let's Talk</h3>
         </Animate>
+
         <Animate
           play
           duration={1}
           delay={0}
-          start={{
-            transform: "translateX(200px)",
-          }}
-          end={{
-            transform: "translateX(0px)",
-          }}
+          start={{ transform: "translateX(200px)" }}
+          end={{ transform: "translateX(0px)" }}
         >
-          <div className="contact__content__form">
+          <form
+            className="contact__content__form"
+            action="https://formsubmit.co/shebafernandes5@gmail.com"
+            method="POST"
+          >
             <div className="contact__content__form__controlswrapper">
               <div>
                 <input
                   required
                   name="name"
                   className="inputName"
-                  type={"text"}
+                  type="text"
+                  placeholder="Name"
                 />
-                <label htmlFor="name" className="nameLabel">
-                  Name
-                </label>
               </div>
               <div>
                 <input
                   required
                   name="email"
                   className="inputEmail"
-                  type={"text"}
+                  type="email"
+                  placeholder="Email"
                 />
-                <label htmlFor="email" className="emailLabel">
-                  Email
-                </label>
               </div>
               <div>
                 <textarea
                   required
-                  name="description"
+                  name="message"
                   className="inputDescription"
-                  type={"text"}
                   rows="5"
+                  placeholder="Description"
                 />
-                <label htmlFor="description" className="descriptionLabel">
-                  Description
-                </label>
               </div>
             </div>
-            <button>Submit</button>
-          </div>
+            <button type="submit">Submit</button>
+          </form>
         </Animate>
       </div>
     </section>
   );
 };
+
 export default Contact;

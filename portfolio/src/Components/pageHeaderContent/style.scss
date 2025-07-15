@@ -1,25 +1,60 @@
 .page-header-content {
+  width: 150%;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.5rem;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; // 🔄 ensures text and icon wrap nicely on smaller screens
+  }
+
+  &__text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--yellow-theme-main-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    flex: 1;
+  }
+
+  &__icon {
+    background-color: var(--yellow-theme-main-color);
+    color: #000;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
-    justify-content: space-between; // Ensures the text is on the left and icon on the right
-    border-bottom: 2px dashed #ffc107; // Yellow dashed line
-    padding: 10px 0;
-    margin-bottom: 20px;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 
-    .header-text {
-        color: #ffc107; // Yellow text color
-        font-size: 28px;
-        font-weight: bold;
+    &:hover {
+      transform: scale(1.1);
+      background-color: #ffd900;
     }
+  }
 
-    .header-icon {
-        background-color: #ffc107; // Yellow background for the icon
-        color: #000; // Black icon color
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  &__line {
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 2px dashed var(--yellow-theme-main-color);
+    opacity: 0.8;
+    animation: slideInLine 1s ease;
+  }
+
+  // 🌀 Line animation on load
+  @keyframes slideInLine {
+    from {
+      width: 0;
+      opacity: 0;
     }
+    to {
+      width: 100%;
+      opacity: 0.8;
+    }
+  }
 }
+

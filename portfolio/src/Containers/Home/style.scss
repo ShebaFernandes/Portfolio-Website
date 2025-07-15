@@ -78,3 +78,67 @@
         transform: scale(0.95);
     }
 }
+.journey {
+  padding: 2rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+
+  &__intro-text {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  &__section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--yellow-theme-main-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    border-bottom: 1px dashed var(--yellow-theme-main-color);
+    padding-bottom: 5px;
+  }
+
+  &__timeline-list,
+  &__lessons-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__timeline-item {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #eee;
+    margin-bottom: 1rem;
+
+    strong {
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+
+  &__lessons-list li {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #bbb;
+    margin-bottom: 0.75rem;
+
+    &::before {
+      content: "✔";
+      margin-right: 0.6rem;
+      color: var(--yellow-theme-main-color);
+    }
+  }
+
+  &__quote blockquote {
+    margin-top: 2rem;
+    font-style: italic;
+    font-size: 1rem;
+    color: #aaa;
+    border-left: 4px solid var(--yellow-theme-main-color);
+    padding-left: 1rem;
+    line-height: 1.6;
+  }
+}

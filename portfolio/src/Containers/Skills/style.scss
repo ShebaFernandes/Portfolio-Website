@@ -5,9 +5,9 @@
   height: 80vh;
   box-sizing: border-box;
   flex-direction: column;
-//   justify-content: flex-start;
+  justify-content: flex-start;
   align-items: center;
-//   margin: 20px;
+  margin: 20px;
 
   .header-container {
       display: flex;
@@ -56,9 +56,10 @@
               padding-bottom: 0.5rem;
           }
 
-          &__progressbar-container {
-              width: 110%;
-          }
+       .progressbar-wrapper p {
+    font-size: 0.9rem; // or 0.9rem for a compact look
+}
+
 
           .progressbar-wrapper {
               padding: 10px 0;
@@ -74,7 +75,7 @@
           .rc-progress-line {
               border-radius: 10px;
               overflow: hidden;
-              height: 10px;
+              height: 9px;
           }
 
           .rc-progress-line-path {
@@ -128,5 +129,27 @@
       .skills__content-wrapper {
           grid-template-columns: 1fr;
       }
+  }
+}
+.resume-download {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+
+  .resume-button {
+    background-color: var(--yellow-theme-main-color);
+    color: #000;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #ffd900;
+      transform: translateY(-2px);
+    }
   }
 }

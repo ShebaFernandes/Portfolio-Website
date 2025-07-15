@@ -1,40 +1,35 @@
 import React from 'react';
-import './style.scss'
-import { FaInfoCircle } from 'react-icons/fa'; // Icon library for better design
+import './style.scss';
 import { BsInfoCircleFill } from "react-icons/bs";
 import PageHeaderContent from "../../Components/pageHeaderContent";
 
 const About = () => {
     return (
         <section id="about" className="about">
-        <PageHeaderContent
-            headerText="About Me "
-            icon={<BsInfoCircleFill size={24} />}
-        />
-     
-          
-   
-        <div className="about">
-            
-            </div>
+            <PageHeaderContent
+                headerText="What I've Been Working On"
+                icon={<BsInfoCircleFill size={24} />}
+            />
 
             <div className="dotted-line"></div>
 
             <div className="about-content">
                 <p>
-                    Hi! I'm <strong>Sheba Fernandes</strong>, a passionate web developer and tech enthusiast currently pursuing my Bachelor of Engineering in <strong>Computer Science and Business Systems</strong> from St. Joseph Engineering College, Mangalore.
+                    Hi! I'm <strong>Sheba Fernandes</strong>, a tech enthusiast and web developer currently pursuing my Bachelor of Engineering in <strong>Computer Science and Business Systems</strong> from St. Joseph Engineering College, Mangalore.
                 </p>
                 <p>
-                    With experience in building dynamic web applications using <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express</strong>, and <strong>PostgreSQL</strong>, I love creating user-friendly and efficient solutions.  
+                    Recently, I participated in the <strong>SAP HackFest (State Hub Round)</strong>, where I used the <strong>Design Thinking</strong> approach to solve real-world challenges with technology, blending innovation, business, and engineering.
                 </p>
                 <p>
-                    I’ve showcased my skills in hackathons, like the 24-hour individual hackathon at VTU Belagavi where I built an Expense Tracker using modern technologies. My internship at <strong>Interpe</strong> also strengthened my web development expertise.
+                    I also built a full-stack AI-powered web app for the <strong>AI & Education Hackathon</strong>. It automates educational video generation using technologies like <strong>React.js</strong>, <strong>FastAPI</strong>, <strong>Hugging Face models</strong>, <strong>Runway ML</strong>, and <strong>Firebase</strong>.
                 </p>
                 <p>
-                    I thrive in learning new technologies and take pride in turning ideas into reality through coding and innovation.
+                    Passionate about Gen AI, I’ve been experimenting with <strong>text-to-video</strong>, <strong>text-to-image</strong>, <strong>multilingual AI</strong>, and <strong>offline AI solutions</strong> using models like <strong>Phi-3</strong>, <strong>TinyLLaMA</strong>, and <strong>MarianMT</strong>.
+                </p>
+                <p>
+                    From hackathons to personal projects, I enjoy building things that combine creativity with real-world impact.
                 </p>
             </div>
-        
         </section>
     );
 };
